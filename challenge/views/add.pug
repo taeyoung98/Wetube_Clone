@@ -1,0 +1,10 @@
+extends templates/layout
+
+block content
+  h1=pageTitle
+  .form__container 
+    form(action="/add", method="POST")
+      input(type="text", name="title", placeholder="Title")
+      textarea(name="synopsis", cols="30", rows="10", placeholder="Synopsis")
+      input(type="text", name="genres", placeholder="Genres")
+      input(type="submit", value="Add Movie")
